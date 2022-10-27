@@ -1,0 +1,38 @@
+<main id="personaje" class="bg-dark bg-gradient">
+  <div class="container">
+    <h3>Information on the main characters of the Star Wars saga</h3>
+    <!-- MUESTRA PERSONAJE -->
+    <div class="card" *ngIf="personaje != null">
+      <div class="card-body">
+        <h5 class="card-title">{{ personaje.name }} #{{ idPersonaje }}</h5>
+        <p class="card-text">Gender: {{ personaje.gender }}</p>
+      </div>
+      <ul
+        class="list-group list-group-flush"
+        *ngFor="let pelicula of peliculas"
+      >
+        <li class="list-group-item">{{ pelicula.title }}</li>
+      </ul>
+      <div class="row text-center">
+        <div class="col">
+          <button type="button" class="btn btn-warning" (click)="anterior()">
+            Previous
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-warning" (click)="siguiente()">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- MUESTRA CARGANDO -->
+    <div class="text-center" *ngIf="personaje == null">
+      <div
+        class="spinner-grow"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      ></div>
+    </div>
+  </div>
+</main>

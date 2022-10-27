@@ -1,0 +1,27 @@
+#personaje {
+  min-height: 100vh;
+}
+
+#personaje h3 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: whitesmoke;
+}
+
+#personaje button {
+  margin: 25px 0 25px;
+  width: 175px;
+  border: 2px solid black;
+}
+
+@media (max-width: 450px) {
+  #personaje h3 {
+    text-align: center;
+  }
+
+  #personaje button {
+    margin: 10px 0 10px;
+    height: 35px;
+    width: 125px;
+  }
+}

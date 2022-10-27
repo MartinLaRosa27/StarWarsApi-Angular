@@ -1,0 +1,9 @@
+#navbar img {
+  max-width: 100px;
+}
+
+@media (max-width: 400px) {
+  #navbar img {
+    max-width: 60px;
+  }
+}
